@@ -18,17 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from example1.views import index
 from task2.views import func
-from task2.views import cls
-# from example1.views import index2
+from task2.views import МуTemplateView
 from django.views.generic import TemplateView
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', index),
-    # path('index2/', index2.as_view()),
     path('index2/', TemplateView.as_view(template_name='index2.html')),
     path('func/', func),
     # path('class/', TemplateView.as_view(template_name='class_template.html')),
-    path('class/', cls.as_view())
+    path('class/', МуTemplateView.as_view())
 
 ]
